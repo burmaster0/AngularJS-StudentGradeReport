@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html ng-app="app">
+<head>
+    <title>Student Grade Report</title>
+    @Styles.Render("~/content/bootstrap")
+    @Styles.Render("~/content/toastr")
+    @Styles.Render("~/content/css")
+</head>
+<body>
+    
+    <header>
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                    <li>@Html.ActionLink("Enter Grades", "Index", "Home")</li> 
+                    </ul>
+                </div>
+            </div>
+       </header>
+       <article>
+           <p></p>
+           <div ng-controller="grades" class="grades">
+            <h1>Student Grade Report</h1>
+            <div crud-grid table-name='Student'></div>
+           </div>
+       </article>
+        <footer>
+                <small>&copy; @DateTime.Now.Year - Student Grade Report
+                </small>
+        </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/toastr")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+
+
+
